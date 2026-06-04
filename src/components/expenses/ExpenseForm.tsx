@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form'; // Note: Decided to use standard state based on previous decisions, let's use standard state for forms
-import { ExpenseFormData, expenseSchema } from '../../../schemas/expense.schemas';
-import { Modal } from '../../ui/Modal';
-import { Button } from '../../ui/Button';
-import { Input } from '../../ui/Input';
-import { Expense } from '../../../types/expense.types';
+import { ExpenseFormData, expenseSchema } from '../../schemas/expense.schemas';
+import { Modal } from '../ui/Modal';
+import { Button } from '../ui/Button';
+import { Input } from '../ui/Input';
+import { Expense } from '../../types/expense.types';
 
 interface ExpenseFormProps {
   isOpen: boolean;

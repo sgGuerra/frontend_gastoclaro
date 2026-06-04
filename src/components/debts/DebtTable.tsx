@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Debt } from '../../../types/debt.types';
-import { Badge } from '../../ui/Badge';
+import { Debt } from '../../types/debt.types';
+import { Badge } from '../ui/Badge';
 
 interface DebtTableProps {
   debts: Debt[];

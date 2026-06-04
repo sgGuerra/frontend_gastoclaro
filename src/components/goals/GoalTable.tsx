@@ -1,9 +1,9 @@
 "use client";
 
 import React from 'react';
-import { Goal } from '../../../types/goal.types';
-import { Badge } from '../../ui/Badge';
-import { ProgressBar } from '../../ui/ProgressBar';
+import { Goal } from '../../types/goal.types';
+import { Badge } from '../ui/Badge';
+import { ProgressBar } from '../ui/ProgressBar';
 
 interface GoalTableProps {
   goals: Goal[];

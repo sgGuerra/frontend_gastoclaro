@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Expense } from '../../../types/expense.types';
-import { Badge } from '../../ui/Badge';
+import { Expense } from '../../types/expense.types';
+import { Badge } from '../ui/Badge';
 
 interface ExpenseTableProps {
   expenses: Expense[];

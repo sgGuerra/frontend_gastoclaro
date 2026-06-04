@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Saving } from '../../../types/saving.types';
+import { Saving } from '../../types/saving.types';
 
 interface SavingTableProps {
   savings: Saving[];

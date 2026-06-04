@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { SavingFormData, savingSchema } from '../../../schemas/saving.schemas';
-import { Modal } from '../../ui/Modal';
-import { Button } from '../../ui/Button';
-import { Input } from '../../ui/Input';
-import { Saving } from '../../../types/saving.types';
+import { SavingFormData, savingSchema } from '../../schemas/saving.schemas';
+import { Modal } from '../ui/Modal';
+import { Button } from '../ui/Button';
+import { Input } from '../ui/Input';
+import { Saving } from '../../types/saving.types';
 
 interface SavingFormProps {
   isOpen: boolean;
