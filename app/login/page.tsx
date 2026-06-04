@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form'; // Note: Decided not to use hook form in plan, using state instead
-import { zodResolver } from '@hookform/resolvers/zod'; // Since no react-hook-form, I'll manually validate
 import { loginSchema, LoginFormData } from '../../src/schemas/auth.schemas';
 import { useAuth } from '../../src/hooks/useAuth';
 import { useToast } from '../../src/hooks/useToast';
