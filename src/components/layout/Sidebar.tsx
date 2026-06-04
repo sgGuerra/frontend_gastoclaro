@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useAuth } from '../../hooks/useAuth';
 
-export const Sidebar = () => {
+export const Sidebar = ({ isOpen, setIsOpen }: { isOpen?: boolean, setIsOpen?: (v: boolean) => void }) => {
   const pathname = usePathname();
   const { user, logout, isAdmin } = useAuth();
 
@@ -20,7 +20,7 @@ export const Sidebar = () => {
   }
 
   return (
-    <aside className="h-screen w-64 fixed left-0 top-0 backdrop-blur-xl bg-glass-bg border-r border-glass-border shadow-xl flex flex-col p-gutter z-40">
+    <aside className={`h-screen w-64 fixed left-0 top-0 backdrop-blur-xl bg-glass-bg border-r border-glass-border shadow-xl flex flex-col p-gutter z-40 transition-transform duration-300 md:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <div className="flex flex-col gap-2 mb-8">
         <h1 className="font-title-md text-title-md font-bold text-primary">GastoClaro</h1>
         <p className="font-body-md text-body-md text-on-surface-variant opacity-70">Personal Copilot</p>
@@ -33,6 +33,7 @@ export const Sidebar = () => {
             <Link
               key={link.href}
               href={link.href}
+              onClick={() => setIsOpen && setIsOpen(false)}
               className={`flex items-center gap-4 p-3 transition-all duration-200 active:scale-95 rounded-r-lg ${
                 isActive
                   ? 'bg-primary/10 text-primary border-r-4 border-primary font-bold'
@@ -49,10 +50,10 @@ export const Sidebar = () => {
       <div className="mt-auto pt-gutter border-t border-glass-border flex flex-col gap-4">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary font-bold">
-            {user?.name?.charAt(0).toUpperCase()}
+            {user?.name?.charAt(0).toUpperCase() || 'U'}
           </div>
           <div className="flex flex-col overflow-hidden">
-            <span className="font-label-sm text-label-sm font-bold truncate">{user?.name}</span>
+            <span className="font-label-sm text-label-sm font-bold truncate">{user?.name || 'Usuario'}</span>
             <span className="font-label-sm text-label-sm opacity-60 truncate">{user?.role === 'admin' ? 'Administrador' : 'Usuario'}</span>
           </div>
         </div>
