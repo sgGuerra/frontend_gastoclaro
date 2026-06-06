@@ -91,7 +91,7 @@ Aplicamos Clean Architecture enfocada al frontend:
 
 ## 🌐 Enlace de Despliegue (Deploy)
 
-🔗 **API en Producción (Vercel):** [https://frontend-gastoclaro.vercel.app/]([https://vercel.com](https://frontend-gastoclaro.vercel.app/)) 
+🔗 **API en Producción (Vercel):** [https://frontend-gastoclaro.vercel.app/](https://frontend-gastoclaro.vercel.app/) 
 
 Asegúrate de configurar la variable de entorno `NEXT_PUBLIC_API_URL` apuntando a tu backend en producción.
 
