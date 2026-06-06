@@ -41,7 +41,24 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
     };
   }
 
-  return data;
+  if (data && typeof data === 'object' && !Array.isArray(data)) {
+    const hasData = 'data' in data;
+    const hasToken = 'token' in data;
+    const keys = Object.keys(data);
+
+    if (hasToken && hasData) {
+      return {
+        ...data,
+        user: (data as any).data,
+      } as T;
+    }
+
+    if (hasData && keys.length === 1) {
+      return (data as any).data as T;
+    }
+  }
+
+  return data as T;
 }
 
 export const apiClient = {
