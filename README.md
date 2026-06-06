@@ -89,14 +89,12 @@ Aplicamos Clean Architecture enfocada al frontend:
 
 ---
 
-## 🔗 Despliegue
+## 🌐 Enlace de Despliegue (Deploy)
 
-La plataforma está diseñada para ser fácilmente desplegada en plataformas sin servidor (serverless) como:
-*   [Vercel](https://vercel.com) (Recomendado)
-*   [Netlify](https://netlify.com)
+🔗 **API en Producción (Vercel):** [https://frontend-gastoclaro.vercel.app/](https://frontend-gastoclaro.vercel.app/) 
 
 Asegúrate de configurar la variable de entorno `NEXT_PUBLIC_API_URL` apuntando a tu backend en producción.
 
 ---
 
-> Hecho por **[Tu Nombre / Equipo]** para GastoClaro.
+> Hecho por **Luis Carlos Guerra** para GastoClaro.
